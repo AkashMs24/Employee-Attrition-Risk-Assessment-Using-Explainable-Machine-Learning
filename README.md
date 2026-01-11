@@ -32,5 +32,7 @@ A Random Forest classifier predicts attrition risk as a probability score rather
 - The deployed app uses a lightweight feature set for fast inference.
 - Predictions are decision-support oriented, not absolute rules.
 
+- Model trained offline using historical HR data and exported as a serialized artifact.
+
 ## 👤 Author
 **Akash M S**
