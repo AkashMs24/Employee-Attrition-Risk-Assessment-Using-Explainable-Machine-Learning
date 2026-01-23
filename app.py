@@ -159,9 +159,26 @@ uploaded_file = st.file_uploader("Upload employee CSV", type=["csv"])
 
 if uploaded_file:
     batch_df = pd.read_csv(uploaded_file)
-    batch_df["OverTime"] = batch_df["OverTime"].map({"Yes": 1, "No": 0})
-    batch_df["Attrition Risk"] = model.predict_proba(batch_df)[:, 1].round(2)
-    st.dataframe(batch_df)
+
+    required_columns = ["Age", "MonthlyIncome", "YearsAtCompany", "OverTime"]
+
+    # Check required columns
+    if not all(col in batch_df.columns for col in required_columns):
+        st.error(
+            "CSV must contain these columns: Age, MonthlyIncome, YearsAtCompany, OverTime"
+        )
+    else:
+        # Encode OverTime
+        batch_df["OverTime"] = batch_df["OverTime"].map({"Yes": 1, "No": 0})
+
+        # Select & order features exactly as training
+        X_batch = batch_df[required_columns]
+
+        # Predict
+        batch_df["Attrition Risk"] = model.predict_proba(X_batch)[:, 1].round(2)
+
+        st.dataframe(batch_df)
+
 
 # -----------------------------
 # Feature explanation
@@ -173,3 +190,4 @@ with st.expander("ℹ️ Feature Explanation"):
     - **Years at Company**: Employee loyalty & stability  
     - **OverTime**: Workload & burnout signal  
     """)
+
