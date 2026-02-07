@@ -191,3 +191,7 @@ with st.expander("ℹ️ Feature Explanation"):
     - **OverTime**: Workload & burnout signal  
     """)
 
+st.markdown("---")
+st.caption("v1.0 • Portfolio Demonstration Project")
+st.caption("Built by Akash M S")
+
