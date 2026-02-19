@@ -1,4 +1,4 @@
-# Employee Attrition Prediction System 📊
+# Explainable HR Attrition Decision Support System 📊
 
 A machine learning–based web application that predicts employee attrition risk and supports HR decision-making.
 
