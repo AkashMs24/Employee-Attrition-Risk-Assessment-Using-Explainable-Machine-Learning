@@ -13,7 +13,7 @@ model = joblib.load("rf_model_4_features.pkl")
 # Page config
 # -----------------------------
 st.set_page_config(
-    page_title="Employee Attrition Predictor",
+    page_title="Explainable HR Attrition Decision Support System",
     page_icon="📊",
     layout="centered"
 )
@@ -21,7 +21,7 @@ st.set_page_config(
 # -----------------------------
 # Title
 # -----------------------------
-st.title("📊 Employee Attrition Prediction")
+st.title("📊 Employee Attrition Risk Assessment Using Explainable Machine Learning")
 st.caption("Predict attrition risk using machine learning")
 st.markdown("---")
 
@@ -194,4 +194,5 @@ with st.expander("ℹ️ Feature Explanation"):
 st.markdown("---")
 st.caption("v1.0 • Portfolio Demonstration Project")
 st.caption("Built by Akash M S")
+
 
