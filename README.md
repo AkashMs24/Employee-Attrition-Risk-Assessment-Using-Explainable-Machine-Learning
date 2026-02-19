@@ -25,7 +25,7 @@ A Random Forest classifier predicts attrition risk as a probability score rather
 - Cloud deployment (Streamlit Cloud)
 
 ## 🌐 Live Demo
-👉 **[https://employee-attrition-app-oa7tsc3aifnmbczgtyeq64.streamlit.app/]**
+👉 **[https://explainable-hr-attrition-risk-system.streamlit.app/]**
 
 ## 📌 Notes
 - Training and deployment pipelines are separated.
